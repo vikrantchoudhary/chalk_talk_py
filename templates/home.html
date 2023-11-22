@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chalk And Talk Speech and Hearing Clinic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <style>
+      #banner {
+        height: 360px;
+        width: 100%;
+        object-fit:cover;
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'nav1.html' %}
+    <img class="img-fluid" id="banner" src="/static/banner2.jpg" >
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">
+        <img src="/static/logo1.png" alt="" width="40" height="40" class="d-inline-block align-text-top"> 
+        {{company_name}} 
+      </h1>
+      <div class="row" style="margin-bottom:32px">
+        <div class="col-md-6">
+        <p class="lead">
+       
+        At {{company_name}}, we offers  audiology, speech and language services to children and adults.
+          We offers the services both offline and online. 
+        </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+        <img src="/static/speech.jpg" style="height:320px;border-radius:4px;">
+        </div>
+      </div>
+      <p></p>
+      <div class="row" style="margin-bottom:32px">
+        <div class="d-none d-md-block col-md-6">
+          <img src="/static/hearing.jpg" style="height:320px;border-radius:4px;">
+          </div>
+        <div class="col-md-6">
+        <p class="lead">
+        At {{company_name}}, we offers  audiology, speech and language services to children and adults.
+          We offers the services both offline and online. 
+        </p>
+        </div>
+        
+      </div>
+      <h2 class="text-center mt-2 mb-4">Our Services</h2>
+      <div>
+        {% for service in services %}
+          {% include 'serviceitem.html' %}
+        {% endfor %}
+      </div>
+      <div class="text-center">
+      <a class="btn btn-primary btn-lg" href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Opernings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E%0D%0A">Contact Us</a>
+      </div>
+    </div>
+    {% include 'footer.html' %}
+  </body>
+</html>
